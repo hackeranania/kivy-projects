@@ -1,0 +1,62 @@
+MDBoxLayout:       
+    MDBottomNavigation:
+        MDBottomNavigationItem:
+            name:'Local area '
+            text : 'Local cases'
+            icon : 'chevron-down'
+            Image:
+                source : app.image
+            MDLabel:
+                id : labe
+                text: app.test
+                pos_hint :{'center_x':.5 , 'center_y':.3} 
+                halign : 'center'  
+
+            MDFloatingActionButtonSpeedDial:
+                root_button_anim : True
+                data : {'DARK MODE':'brightness-4','LIGHT MODE':'brightness-7'}
+                callback : app.mango
+            MDLabel:
+                text: app.country
+                pos_hint :{'center_x':.5 , 'center_y':.955} 
+                halign : 'center'
+            MDLabel:
+                text: app.death
+                pos_hint :{'center_x':.3 , 'center_y':.755} 
+                halign : 'center'
+            MDLabel:
+                text: app.cases
+                pos_hint :{'center_x':.3 , 'center_y':.255} 
+                halign : 'center'
+            MDLabel
+                text: ''
+                pos_hint :{'center_x':.755 , 'center_y':.755} 
+                halign : 'center'
+            
+
+
+
+
+
+        MDBottomNavigationItem:
+            name : 'Gloabl '
+            text : 'Global cases'
+            icon :'google-earth'
+            Image:
+                source : app.image
+
+
+
+    		MDLabel:
+                text:app.test
+                pos_hint :{'center_x':.5 , 'center_y':.3} 
+                halign : 'center'    
+            MDFloatingActionButtonSpeedDial:
+                id : jarvis
+                root_button_anim : True
+                data : {'DARK MODE':'brightness-4','LIGHT MODE':'brightness-7'}
+                callback:app.mango
+                Image:
+                    id : var
+                    source : app.image
+               

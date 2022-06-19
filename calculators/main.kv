@@ -1,0 +1,400 @@
+#: import Snackbar kivymd.uix.snackbar.Snackbar
+Screen:
+	MDNavigationLayout:
+		ScreenManager:
+			id:screen_manage
+			Screen:
+				name : '1'
+				MDBoxLayout:
+					orientation:'vertical'
+					#size:root.width,root.height
+					FloatLayout:
+						#size_hint: (.1, .1)
+						MDIconButton:
+							icon: 'menu'
+							pos_hint: {'top': .9999,'center_x':.05}
+							#on_press:nav_drawer.set_state('toggle')
+							on_press:Snackbar(text='App is updated!').open()
+						MDLabel:  
+							id : calc
+							text : '0'
+							background_color:(34,49,63,1)
+							foreground_color:(34, 49, 63, 1) 
+							pos_hint: {'center_x': .47,'top':.87}
+							halign: 'right'
+							#multiline : False
+							font_size : 50 
+							size_hint:(1,.1)	
+						MDCard:
+							id:kite
+							elevation : 20
+							size_hint:(1,1)
+							#width: 750
+							#height: 500
+							pos_hint: {'center_y':.23}
+							radius : [25]
+							color:34,49,63,1
+							GridLayout:
+								cols:4
+								rows:5
+								padding: 110,20,1,1
+								spacing : 80,40
+								MDRaisedButton:
+									id : a
+									text:'AC'		
+									font_size:22
+									radius : [25]
+									#pos_hint: {'top':.99,'center_x':0.1}
+									md_bg_color: (0,0,0,.65)
+									text_color:(249/255,59/255,59/255,0.8)
+									
+								MDRaisedButton:
+									id : b
+									text:'+/-'
+									font_size : 22
+																											
+									font_size:22
+
+									#pos_hint: {'top':.99,'center_x':0.35}
+									md_bg_color: (0,0,0,.65)
+									text_color: (0,1,.7,1)
+								MDRaisedButton:
+									id : c
+									text:'%'
+									font_size: 22
+																											
+									font_size:22
+
+									#pos_hint: {'top':.99,'center_x':0.65}
+									md_bg_color: (0,0,0,.65)
+									text_color: (0,1,.7,1)
+								MDRaisedButton:
+									id : d
+									text:'÷'
+									font_size: 22
+																											
+									font_size:22
+
+									#pos_hint: {'top':.99,'center_x':.9}
+									md_bg_color: (0,0,0,.65)
+									text_color:(249/255,59/255,59/255,0.8)
+
+
+
+
+
+								MDRaisedButton:
+									text:'7'
+																											
+									font_size:22
+									id : e
+									on_press:app.type(int(7))
+									#pos_hint: {'top':.85,'center_x':.1}
+									md_bg_color: (0,0,0,.65)
+									text_color: (0,1,.7,1)
+								MDRaisedButton:
+									text:'8'
+																											
+									font_size:22
+									id : f
+									#pos_hint: {'top':.85,'center_x':.35}
+									md_bg_color: (0,0,0,.65)
+									text_color: (0,1,.7,1)
+								MDRaisedButton:
+									text:'9'
+									#size_hint:(.1,.1)
+									id : g
+									font_size:22
+									#pos_hint: {'top':.85,'center_x':.65}
+									md_bg_color: (0,0,0,0.2)
+									text_color: (0,1,.7,1)
+								MDRaisedButton:
+									text:'x'
+																											
+									font_size:22
+									id : h
+									font_size: 20
+									#pos_hint: {'top':.85,'center_x':.9}
+									md_bg_color: (0,0,0,.65)
+									text_color:(249/255,59/255,59/255,0.8)
+
+
+
+
+
+								MDRaisedButton:
+									text:'4'
+																											
+									font_size:22
+									id : i
+									#pos_hint: {'top':.71,'center_x':.1}
+									md_bg_color: (0,0,0,.65)
+									text_color: (0,1,.7,1)
+								MDRaisedButton:
+									text:'5'
+																											
+									font_size:22
+									id : j
+									#pos_hint: {'top':.71,'center_x':.35}
+									md_bg_color: (0,0,0,.65)
+									text_color: (0,1,.7,1)
+								MDRaisedButton:
+									text:'6'
+																											
+									font_size:22
+									id : k
+									#pos_hint: {'top':.71,'center_x':.65}
+									md_bg_color: (0,0,0,.65)
+									text_color: (0,1,.7,1)							
+								MDRaisedButton:
+									text:'-'
+									font_size: 22
+																											
+									font_size:22
+									id : l
+									#pos_hint: {'top':.71,'center_x':.9}
+									md_bg_color: (0,0,0,.65)
+									text_color:(249/255,59/255,59/255,0.8)
+
+
+
+
+
+
+
+
+								MDRaisedButton:
+									text:'1'
+																											
+									font_size:22
+									id : m
+									#pos_hint: {'top':.57,'center_x':.1}
+									md_bg_color: (0,0,0,.65)
+									text_color: (0,1,.7,1)
+								MDRaisedButton:
+									text:'2'
+																											
+									font_size:22
+									id : n
+									#pos_hint: {'top':.57,'center_x':.35}
+									md_bg_color: (0,0,0,.65)
+									text_color: (0,1,.7,1)
+								MDRaisedButton:
+									text:'3'
+																											
+									font_size:22
+									id : o
+									#pos_hint: {'top':.57,'center_x':.65}
+									md_bg_color: (0,0,0,.65)
+									text_color: (0,1,.7,1)							
+								MDRaisedButton:
+									text:'+'
+																											
+									font_size:22
+									id : p
+									#pos_hint: {'top':.57,'center_x':.9}
+									md_bg_color: (0,0,0,.65)
+									text_color:(249/255,59/255,59/255,0.8)
+									font_size: 22
+
+
+
+
+
+								MDRaisedButton:
+									text:'<-'
+																											
+									font_size:22
+									id : q
+									#pos_hint: {'top':.43,'center_x':.1}
+									md_bg_color: (0,0,0,.65)
+									text_color: (0,1,.7,1)
+								MDRaisedButton:
+									text:'0'
+																											
+									font_size:22
+									id : r
+									#pos_hint: {'top':.43,'center_x':.35}
+									md_bg_color: (0,0,0,.65)
+									text_color: (0,1,.7,1)
+								MDRaisedButton:
+									text:'.'
+																											
+									font_size:22
+									id : s
+									#pos_hint: {'top':.43,'center_x':.65}
+									md_bg_color: (0,0,0,.65)
+									text_color: (0,1,.7,1)							
+								MDRaisedButton:
+									text:'='
+																											
+									font_size:22
+									id : t
+									#pos_hint: {'top':.43,'center_x':.9}
+									md_bg_color: (0,0,0,.65)
+									text_color:(249/255,59/255,59/255,0.8)
+									font_size: 22														
+				MDNavigationDrawer:
+					id: nav_drawer
+					opening_time:.3
+					scrim_color : [0,0,0,.1]
+					elevation : '0'
+					md_bg_color: (1,0,0,.65)
+					
+					BoxLayout: 
+						ScrollView:
+							MDList:
+								OneLineAvatarIconListItem:
+									text:'Settings'
+									on_release:screen_manage.current = '2'	
+									divider_color:0,0,0,0
+									IconLeftWidget:
+										icon:'cog'
+
+			
+					
+			Screen:
+				name : '2'
+				FloatLayout:
+					#orientation: 'vertical'		
+					MDToolbar:
+						title: '          Settings'
+						pos_hint: {'top': 1}						
+					MDIconButton:
+			    		pos_hint: {'center_x': 0.05,'center_y':.95}
+			    		icon : 'arrow-left'
+			    		on_press : screen_manage.current = '1'
+			    	ScrollView:	
+			    		pos_hint: {'top': .891}
+			    		OneLineAvatarIconListItem:
+							on_release:screen_manage.current = '3'	
+							text:'Themes'
+							#divider_color:0,0,0,0
+							#on_release: Snackbar(text="This is a snackbar!").open(self)
+							IconLeftWidget:
+								icon:'brightness-4'
+
+			    				    									
+			Screen:
+				name : '3'	
+				FloatLayout:
+					MDToolbar:
+						title: '          ABOUT'
+						pos_hint: {'top': 1}
+					MDIconButton:
+			    		pos_hint: {'center_x': 0.05,'center_y':.95}
+			    		icon:'arrow-left'
+			    		on_press : screen_manage.current = '2'	
+			    	ScrollView:	
+						pos_hint: {'top': .87}
+						bar_color:0,0,0,0
+						bar_inactive_color:0,0,0,0
+						GridLayout:
+							id:grid
+							#padding: [50,0]
+							#size_hint_x:None 
+							size_hint_y: None
+							height: 350
+			    			#width: 2150
+							#pos_hint: {'top': .891}
+							cols: 1
+							rows:4
+							#spacing: (50,0)
+							MDLabel:
+								text: 'Feautered Themes\n   \n    '
+								halign: 'center'
+								size_hint_y: None
+								height: self.texture_size[1]
+					    	ScrollView:
+					    		bar_color:0,0,0,0
+					    		bar_inactive_color:0,0,0,0
+								#scroll_x: 0
+								GridLayout:
+									padding: [50,0]
+									size_hint_x:None 
+									#size_hint_y: None
+					    			width: 1440
+									#pos_hint: {'top': .891}
+									pos_hint: {'top': .87}
+									cols: 6
+									spacing: (50,0)
+									MDCard:
+										size_hint_y: None
+										size_hint_x: None
+										height: 190
+										width: 190
+										radius:[29]
+										ripple_behavior: True
+										#padding: 190
+										FitImage:
+											source: 'ty.png'
+											size_hint_x: 1	
+											radius:[29,]
+									MDCard:
+										size_hint_y: None
+										size_hint_x: None
+										height: 190
+										width: 190
+										radius:[29]
+										ripple_behavior: True
+										#padding: 190
+										FitImage:
+											source: 'ty.png'
+											size_hint_x: 1	
+											radius:[29,]
+									MDCard:
+										size_hint_y: None
+										size_hint_x: None
+										height: 190
+										width: 190
+										radius:[29]
+										ripple_behavior: True
+										#padding: 190
+										FitImage:
+											source: 'ty.png'
+											size_hint_x: 1	
+											radius:[29,]
+									MDCard:
+										size_hint_y: None
+										size_hint_x: None
+										height: 190
+										width: 190
+										radius:[29]
+										ripple_behavior: True
+										#padding: 190
+										FitImage:
+											source: 'ty.png'
+											size_hint_x: 1	
+											radius:[29,]
+									MDCard:
+										size_hint_y: None
+										size_hint_x: None
+										height: 190
+										width: 190
+										radius:[29]
+										ripple_behavior: True
+										#padding: 190
+										FitImage:
+											source: 'ty.png'
+											size_hint_x: 1	
+											radius:[29,]
+									MDCard:
+										size_hint_y: None
+										size_hint_x: None
+										height: 190
+										width: 190
+										style:'outlined'
+										radius:[29]
+										ripple_behavior: True
+										on_press:print('hello worlld')
+										#padding: 190
+										FitImage:
+											source: 'ty.png'
+											size_hint_x: 1	
+											radius:[29,]
+							MDLabel:
+								text: 'unsupported'
+								size_hint_y: None
+								height: self.texture_size[1]
+								halign: 'center'
+								font_color:1,0,0,1
